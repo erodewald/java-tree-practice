@@ -61,11 +61,12 @@ demand. Code should be ready to turn over to someone else for maintenance.
         * What if there were 500 million rows in the data file, would you make any changes? Where would
     your code break?
     
- ## Rationale, thoughts
+ ## Rationale, thoughts, assumptions
  
+ * I am assuming that the data example provided exhibits all possible variants - for example, there will never be an org ID with 0. With this assumption, I wrote some tests to ensure the appropriate exceptions are thrown when the data is "incorrect". 
  * I chose to use `long` over `int` for `getTotalNumBytes()` due to the likelihood of exceeding the  maximum value of Java's `int` data type (`2 147 483 647`). `long` is capable of `9 223 372 036 854 775 807`.
  * Making this tool operate only in a command-line for the sake of simplicity. Of course, it would be simple enough to incorporate this functionality into a web app or some kind of GUI desktop application, but the requirements didn't ask for it. 
- * With my C# background, proper Java naming conventions were a little foggy to me. I made the decision to go with `Org` as the interface and `OrgImpl` as the implementation due to the documented requirements stating that the internal public API must include `List<Org>` and not `IOrg` or `OrgInterface`.
- * In `OrgCollectionImpl`, I opted to utilize the `HashMap` data structure due to the lower time complexity, `O(1)`.
+ * With my C# background, proper Java naming conventions were a little foggy to me. I made the decision to go with `Org` as the interface and `OrgImpl` as the implementation.
+ * In `OrgCollectionImpl`, I opted to utilize the `HashMap` data structure due to the lower time complexity, O(1), or O(n) at worst.
  * Although there are more elegant parsing solutions, I opted to simply read a string and split it like a comma-separated file structure since the requirements only allude to that being the format. 
- 
+ * If there were millions of rows, memory would become a major bottleneck but I do believe that performance would be reasonably good. Some kind of persistence system would be required to overcome the memory concerns when working with significant rows. 
