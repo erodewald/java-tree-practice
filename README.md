@@ -2,7 +2,7 @@
 
 *Java Tree practice kata*
 
-The task is to create a tool, using java, that reads an organizational hierarchy into memory and produce stats on
+The task is to create a tool, using java, that reads an organizational hierarchy into memory and produces stats on
 demand. Code should be ready to turn over to someone else for maintenance.
 
 ### Provided requirements
@@ -48,18 +48,19 @@ demand. Code should be ready to turn over to someone else for maintenance.
     ```
     
 ### Non-functional requirements
-    * No dependencies other than the jvm (a test framework such as JUnit or TestNG is acceptable)
-    * Provide source code - please do not send .jar or .class files, they will be rejected by our email system
-    * Implement a few executable tests.. an exhaustive test suite is not needed
-        * Provide your test input file(s)
-    * Provide directions:
-        * How to compile and run your tests
-        * How to create/execute a new test of your code with new data files
-    * Document your thought process
-        * Did you make any assumptions? what were they?
-        * Why did you do use the algorithms you did? what alternatives were there?
-        * What if there were 500 million rows in the data file, would you make any changes? Where would
-    your code break?
+    
+ * No dependencies other than the jvm (a test framework such as JUnit or TestNG is acceptable)
+ * Provide source code - please do not send .jar or .class files, they will be rejected by our email system
+ * Implement a few executable tests.. an exhaustive test suite is not needed
+     * Provide your test input file(s)
+ * Provide directions:
+     * How to compile and run your tests
+     * How to create/execute a new test of your code with new data files
+ * Document your thought process
+     * Did you make any assumptions? what were they?
+     * Why did you do use the algorithms you did? what alternatives were there?
+     * What if there were 500 million rows in the data file, would you make any changes? Where would
+ your code break?
     
  ## Rationale, thoughts, assumptions
  
