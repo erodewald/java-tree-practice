@@ -71,3 +71,11 @@ demand. Code should be ready to turn over to someone else for maintenance.
  * In `OrgCollectionImpl`, I opted to utilize the `HashMap` data structure due to the lower time complexity, O(1), or O(n) at worst.
  * Although there are more elegant parsing solutions, I opted to simply read a string and split it like a comma-separated file structure since the requirements only allude to that being the format. 
  * If there were millions of rows, memory would become a major bottleneck but I do believe that performance would be reasonably good. Some kind of persistence system would be required to overcome the memory concerns when working with significant rows. 
+
+## Building, running, testing
+
+* Gradle will build the application, run the tests, and print the output
+    * From a terminal, run `gradle build`
+    * To run tests: `gradle test`
+        * Test output can be viewed at `build/reports/tests/test/index.html`
+    * To view program output: `gradle run`
