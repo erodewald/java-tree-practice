@@ -11,13 +11,13 @@ public class Main {
 
     public static void main(String[] args) {
         File orgFile = null, userFile = null;
-        if (args.length == 0) {
+        if (args.length == 2) {
+            orgFile = new File(args[0]);
+            userFile = new File(args[1]);
+        } else {
             System.out.println("Expected two arguments (org and user files). Substituting with a large data set.");
             orgFile = new File("./dist/org_data.large");
             userFile = new File("./dist/user_data.large");
-        } else if (args.length == 2) {
-            orgFile = new File(args[0]);
-            userFile = new File(args[1]);
         }
 
         Stream<String> orgData;
